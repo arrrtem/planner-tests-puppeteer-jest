@@ -1,0 +1,16 @@
+{
+  "name": "travelPlannerTool-jest-puppeteer",
+  "version": "1.0.0",
+  "description": "puppeteer and jest practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "ArtemF",
+  "license": "ISC",
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "jest": "^26.1.0",
+    "puppeteer": "^5.1.0"
+  }
+}
