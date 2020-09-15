@@ -6,18 +6,20 @@ const { isElementTextMatchText, getTextContents } = require("./utilities");
 
 const toolURL = "https://www.reiseimpfplaner.de";
 const destination = data.country.australia;
-const width = 1920;
-const height = 1080;
+//const width = 1920;
+//const height = 1080;
 
 beforeAll(async () => {
     browser = await puppeteer.launch({
         headless: true,
         slowMo: false,
         ignoreDefaultArgs: ['--disable-extensions'],
-        args: [`--window-size=${width},${height}`]
+		defaultViewport: null,
+        //args: [`--window-size=${width},${height}`]
+		args: [`--start-maximized`]
     });
     page = await browser.newPage();
-    await page.setViewport({ width, height });
+    //await page.setViewport({ width, height });
 });
 afterAll(() => {
     browser.close();
@@ -51,7 +53,7 @@ describe.each([
             await page.keyboard.press('Enter');
             await page.waitForSelector('.tool-next');
             await page.click('.tool-next');
-        }, 5000),
+        }, 10000),
 
         test("User can access step 2 and select the travel condition", async () => {
             await page.waitForSelector(travelCondSelector);
