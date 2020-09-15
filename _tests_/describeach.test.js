@@ -6,20 +6,16 @@ const { isElementTextMatchText, getTextContents } = require("./utilities");
 
 const toolURL = "https://www.reiseimpfplaner.de";
 const destination = data.country.australia;
-//const width = 1920;
-//const height = 1080;
 
 beforeAll(async () => {
     browser = await puppeteer.launch({
         headless: true,
         slowMo: false,
         ignoreDefaultArgs: ['--disable-extensions'],
-		defaultViewport: null,
-        //args: [`--window-size=${width},${height}`]
-		args: [`--start-maximized`]
+        defaultViewport: null,
+        args: [`--start-maximized`]
     });
     page = await browser.newPage();
-    //await page.setViewport({ width, height });
 });
 afterAll(() => {
     browser.close();
