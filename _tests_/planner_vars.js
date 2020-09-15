@@ -4,7 +4,7 @@ const data = {
         australia: "Australien"
     },
     traverConditionSelectorsList: {
-        langzeitaufenthalt: "div.tool-types-list div:nth-child(1) div.type-item-label", // "div.tool-types-list div:nth-child(1) span:nth-child(1)",
+        langzeitaufenthalt: "div.tool-types-list div:nth-child(1) div.type-item-label",
         backpacking: "div.tool-types-list div:nth-child(2) div.type-item-label",
         hotelKreuzfahrtMitAusflügen: "div.tool-types-list div:nth-child(3) div.type-item-label",
         hotelurlaubOhneAusflüge: "div.tool-types-list div:nth-child(4) div.type-item-label",

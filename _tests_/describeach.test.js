@@ -55,8 +55,9 @@ describe.each([
 
         test("User can access step 2 and select the travel condition", async () => {
             await page.waitForSelector(travelCondSelector);
+            const titleOnStep2 = "div.tool-intro h1";
             // await expect(page).toMatchElement("div.tool-intro", { text: "Impfung planen.Entspannt reisen." });    
-            isElementTextMatchText("div.tool-intro h1", "Impfung planen.Entspannt reisen.");         
+            isElementTextMatchText(titleOnStep2, "Impfung planen.Entspannt reisen.");         
             await page.click(travelCondSelector);
             await page.click('.tool-next');
         }, 5000),
