@@ -9,4 +9,4 @@ To run these tests you should:
 3) Install required packages by running next command in cloned project folder
 > npm install
 4) Execute next command to run the tests 
-> nom test
+> npm test
